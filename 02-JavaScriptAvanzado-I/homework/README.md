@@ -99,6 +99,7 @@ parseInt("09")
 ### Hoisting
 
 ¿Cuál es el output o salida en consola luego de ejecutar este código? Explicar por qué:
+referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución).
 
 ```javascript
 function test() {
