@@ -15,9 +15,16 @@ Como ejercicio adicional y completamente opcional, al terminar de resolver este 
 */
 
 function nFactorial(n) {
+  if (n > -1 && n< 2) return 1
+  else if ( n < 0) return 0
+  return n * nFactorial (n -1)
 }
 
 function nFibonacci(n) {
+  if ( n === 0)return 0
+  else if  (n === 1) return 1
+  return n = nFibonacci (n-1) + nFibonacci(n-2)
+
 }
 
 /*
@@ -30,9 +37,26 @@ Pueden utilizar class o función constructora.
 */
 
 function Queue() {
-
+  this.array = []; // la queue la trabajaos con arreglos, entonces al definirlo en una clase para asociarlo a un elemento en
+  // particular lo hacemos con el this.
+}
+// Cuando trabajamos con instancias nos recomiendan trabajarlo con prototype // hace que cada instancia de queue que genero le asocio
+// un metodo que se llame enqueue 
+Queue.prototype.enqueue = function (elemento){
+  this.array.push(elemento)
+}
+Queue.prototype.dequeue = function (elemento){
+  return this.array.shift (elemento)
+}
+Queue.prototype.size = function(elemento){
+  return this.array.length;
 }
 
+function Queue (){
+  this.array =[];
+}
+
+Queue
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
